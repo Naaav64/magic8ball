@@ -1,8 +1,7 @@
 import random
 import time
 name = input("What is your name? : ")
-question = input("What is your question? : ")
-answer = ""
+question = input("What is your question? : \n")
 random_number = random.randint(1,9)
 # print(random_number)
 
@@ -14,38 +13,32 @@ if name == "":
 
 print(f"{name} asked, '{question}'\n")
 
-
-match random_number:
-  case 1: 
-    answer = "Very doubtful"
-  case 2:
-    answer = "Outlook not so good"
-  case 3:
-    answer = "My sources say no"
-  case 4:
-    answer = "Better not tell you now"
-  case 5:
-    answer = "Ask again later"
-  case 6:
-    answer = "Reply hazy, try again"
-  case 7:
-    answer = "Without a doubt"
-  case 8:
-    answer = "It is decidedly so"
-  case 9:
-    answer = "Yes - definitely"
-  case default:
-    raise Exception("Please refill Magic 8 Ball")
-
+fortunes = [
+  "Very doubtful",
+  "Outlook not so good",
+  "My sources say no",
+  "Better not tell you now",
+  "Ask again later",
+  "Reply hazy, try again",
+  "Without a doubt",
+  "It is decidedly so",
+  "Yes - definitely"
+]
 
 replies = [
-    "Magic 8 Ball is peering through the fog...",
-    "Magic 8 Ball is scrying the Heavens for mandate...",
-    "Magic 8 ball is rending the veil..."
+  "Magic 8 Ball is peering through the fog...",
+  "Magic 8 Ball is scrying the Heavens for mandate...",
+  "Magic 8 ball is rending the veil..."
 ]
+
+
 print(random.choice(replies))
 time.sleep(3)
 
-print(f"Magic 8 Ball says: {answer}")
+
+
+
+print(f"Magic 8 Ball says: {random.choice(fortunes)}")
+print(f"Your (un)lucky number is {random_number}")
 print(f"Magic 8 Ball has spoken!")
 print(f"Begone, {name}!")
