@@ -11,8 +11,8 @@ if question == "":
   exit()
 if name == "":
   name = "Nameless Wretch"
-else:
-  print(f"{name} asked, '{question}'\n")
+
+print(f"{name} asked, '{question}'\n")
 
 
 match random_number:
