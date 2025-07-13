@@ -3,7 +3,6 @@ import time
 name = input("What is your name? : ")
 question = input("What is your question? : \n")
 random_number = random.randint(1,9)
-# print(random_number)
 
 if question == "":
   print("You must ask a question!")
@@ -31,12 +30,8 @@ replies = [
   "Magic 8 ball is rending the veil..."
 ]
 
-
 print(random.choice(replies))
 time.sleep(3)
-
-
-
 
 print(f"Magic 8 Ball says: {random.choice(fortunes)}")
 print(f"Your (un)lucky number is {random_number}")
