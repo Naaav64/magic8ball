@@ -1,10 +1,19 @@
 import random
 import time
-name = "Ken"
+name = input("What is your name? : ")
 question = input("What is your question? : ")
 answer = ""
 random_number = random.randint(1,9)
 # print(random_number)
+
+if question == "":
+  print("You must ask a question!")
+  exit()
+if name == "":
+  name = "Nameless Wretch"
+else:
+  print(f"{name} asked, '{question}'\n")
+
 
 match random_number:
   case 1: 
@@ -29,19 +38,14 @@ match random_number:
     raise Exception("Please refill Magic 8 Ball")
 
 
-print(f"You've asked: {question}\n")
-
-random_reply = random.randint(1,3)
-
-if random_reply < 2: 
-    print("Magic 8 Ball is peering through the fog...")
-    time.sleep(3)
-elif random_reply > 2:
-    print("Magic 8 Ball is scrying the Heavens for mandate...")
-    time.sleep(3)
-elif random_reply == 2:
-    print("Magic 8 ball is rending the veil...")
-    time.sleep(3)
+replies = [
+    "Magic 8 Ball is peering through the fog...",
+    "Magic 8 Ball is scrying the Heavens for mandate...",
+    "Magic 8 ball is rending the veil..."
+]
+print(random.choice(replies))
+time.sleep(3)
 
 print(f"Magic 8 Ball says: {answer}")
 print(f"Magic 8 Ball has spoken!")
+print(f"Begone, {name}!")
