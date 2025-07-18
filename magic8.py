@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 import random
 import time
 name = input("What is your name? : ")
-question = input("What is your question? : \n")
+question = input("What is your question? : ")
 random_number = random.randint(1,9)
 
 if question == "":
@@ -10,7 +11,7 @@ if question == "":
 if name == "":
   name = "Nameless Wretch"
 
-print(f"{name} asked, '{question}'\n")
+print(f"{name} asked, '{question}'")
 
 fortunes = [
   "Very doubtful",
